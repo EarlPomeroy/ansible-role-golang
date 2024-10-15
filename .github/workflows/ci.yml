@@ -3,11 +3,11 @@ name: Tests
 on:
   push:
     branches:
-      - master
+      - main
   pull_request: {}
 
 env:
-  PY_COLORS: '1'
+  PY_COLORS: "1"
 
 jobs:
   lint:
@@ -22,7 +22,7 @@ jobs:
         id: setup-python
         uses: actions/setup-python@v5
         with:
-          python-version-file: '.python-version'
+          python-version-file: ".python-version"
 
       - name: Tox cache
         id: tox-cache
@@ -90,7 +90,7 @@ jobs:
         id: setup-python
         uses: actions/setup-python@v5
         with:
-          python-version-file: '.python-version'
+          python-version-file: ".python-version"
 
       - name: Tox cache
         id: tox-cache
